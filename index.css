@@ -1,0 +1,88 @@
+/*  dùng thay đổi màu liên tục ở tiêu đề */
+@keyframes colorChange {
+  /*  colorChange là 1 cái key dùng để chuyển màu */
+  0% {
+    color: red;
+  }
+  25% {
+    /* tại điểm 25% của thơi gian sẽ xuất hiện màu cam */
+    color: orange;
+  }
+  50% {
+    color: yellow;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: blue;
+  }
+}
+#td {
+  text-align: center;
+  font-size: 50px;
+  font-style: italic;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: chartreuse;
+
+  font-weight: bold;
+  /*  xác định độ đậm */
+  animation: colorChange 5s infinite;
+  /* quy định animation colorChange chạy trong 5s
+  và infinite có nghĩa chạy lặp vĩnh viễn */
+}
+/* dòng phía dưới tiêu đề */
+.nd {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+/*  chỉnh kích thước ảnh */
+.xe {
+  width: 360px;
+  height: 188px;
+}
+/*  chỉnh trên dưới mỗi ảnh */
+@keyframes colorShift {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+.ten {
+  color: blue;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: colorShift 5s infinite linear;
+}
+/* chỉnh bảng  */
+.bang1 {
+  border-spacing: 30px;
+  line-height: 2; /* Tăng khoảng cách giữa các dòng lên 1.5 lần chiều cao dòng chuẩn */
+  /*  10px 150% dòng chuẩn */
+  background-color: #009acd;
+}
+@keyframes colorShift {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
